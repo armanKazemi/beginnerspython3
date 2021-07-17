@@ -35,9 +35,6 @@ while continue_to_play:
         else:
             print('Your guess was higher than the number')
 
-        if guess == guess + 1 or guess == guess - 1:
-            print('Your guess was within 1 of the number')
-
         # Exercise 2 - notify the user if they are within 1 of the actual number
         if guess + 1 == number_to_guess or guess - 1 == number_to_guess:
             print('Your guess was within 1 of the number')

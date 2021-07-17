@@ -58,7 +58,7 @@ print('*' * 10)
 print('Hi' * 10)
 
 # Testing strings containing another string
-print('Edward Alan Rawlings'.find('Alan'))
+print('Edward Alan Rawlings Alan'.find('Alan'))
 print('Edward John Rawlings'.find('Alan'))
 
 print('James' == 'James') # prints True

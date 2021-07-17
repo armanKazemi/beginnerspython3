@@ -3,7 +3,7 @@ import random
 print('Welcome to the number guess game')
 
 # Initialise the number to be guessed
-number_to_guess = random.randint(1,10)
+number_to_guess = random.randint(1, 10)
 
 # Initialise the number of tries the player has made
 count_number_of_tries = 1
@@ -30,7 +30,7 @@ while number_to_guess != guess:
 # Check to see if they did guess the correct number
 if number_to_guess == guess:
     print('Well done you won!')
-    print('You took', count_number_of_tries , 'goes to complete the game')
+    print('You took', count_number_of_tries, 'goes to complete the game')
 else:
     print("Sorry - you loose")
     print('The number you needed to guess was',

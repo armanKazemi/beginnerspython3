@@ -18,6 +18,17 @@ print(factorial(5))
 # Tail recursive example
 
 
+def fact(n):
+    if n == 0:
+        return 1
+    return n * fact(n - 1)
+
+
+# Driver program to test
+# above function
+print(fact(5))
+
+
 def tail_factorial(n, accumulator=1):
     if n == 0:
         return accumulator
