@@ -10,14 +10,14 @@ print(acc3)
 
 acc1.deposit(23.45)
 acc1.withdraw(12.33)
-print('balance:', acc1.balance)
+print('balance:', acc1._balance)
 
 print('Number of Account instances created:', accounts.Account.instance_count)
 
 try:
-    print('balance:', acc1.balance)
+    print('balance:', acc1._balance)
     acc1.withdraw(300.00)
-    print('balance:', acc1.balance)
+    print('balance:', acc1._balance)
 except accounts.BalanceError as e:
     print('Handling Exception')
     print(e)
@@ -25,6 +25,6 @@ except accounts.BalanceError as e:
 with accounts.CurrentAccount ('891', 'Adam', 5.0, 50.0) as acc:
     acc.deposit(23.0)
     acc.withdraw(12.50)
-    print(acc.balance)
+    print(acc._balance)
 
 print('acc1.branch:', acc1.branch)

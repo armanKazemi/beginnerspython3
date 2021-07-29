@@ -29,8 +29,8 @@ class Distance:
 d1 = Distance(6)
 d2 = Distance(3)
 
-print( d1 + d2)
-print (d1 - d2)
-print (d1 / 2)
+print(d1 + d2)
+print(d1 - d2)
+print(d1 / 2)
 print(d2 // 2)
 print(d2 * 2)

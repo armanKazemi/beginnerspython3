@@ -55,6 +55,7 @@ class Account:
         return 'Account[' + self.account_number +'] - ' + \
                self.account_holder + ', ' + self.type + ' account = ' + str(self.balance)
 
+
 class CurrentAccount(Account):
 
     def __init__(self, account_number, account_holder, opening_balance, overdraft_limit):

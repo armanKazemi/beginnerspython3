@@ -1,8 +1,17 @@
 class Quantity:
-    def __init__(self, value=0):
+    def __init__(self, value):
         self.value = value
 
     def __add__(self, other):
+        if isinstance(other.value, dict):
+            self.value.update(other.value)
+            return Quantity(self.value)
+
+        if isinstance(other.value, str) & (isinstance(self.value, int) or isinstance(self.value, float)):
+            return Quantity(str(self.value) + other.value)
+        elif isinstance(self.value, str) & (isinstance(other.value, int) or isinstance(other.value, float)):
+            return Quantity(self.value + str(other.value))
+
         new_value = self.value + other.value
         return Quantity(new_value)
 
@@ -76,6 +85,20 @@ def main():
 
     print('q1 * 2', q1 * 2)
     print('q2 / 2', q2 / 2)
+
+    p1 = Quantity('aa')
+    p2 = Quantity('ddd')
+    print('p1 + p2:', p1 + p2)
+
+    d1 = {'0': 0,
+          '1': 1}
+    d2 = {'2': 2,
+          '3': 3}
+    dq1 = Quantity(d1)
+    dq2 = Quantity(d2)
+    print('dq1 + dq2:', dq1 + dq2)
+
+    print('p1 + q1:', p1 + q1)
 
 
 if __name__ == '__main__':

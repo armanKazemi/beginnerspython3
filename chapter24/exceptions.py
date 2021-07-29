@@ -48,8 +48,10 @@ class DivideByYWhenZeroException(Exception):
 def divide(x, y):
     try:
         result = x / y
+        return result
     except Exception as e:
-        raise DivideByYWhenZeroException from e
+        print(e)
+        # raise DivideByYWhenZeroException from e
 
 
 class Person:
@@ -116,6 +118,7 @@ finally:
 try:
     function_bang()
 except ValueError as ve:
+    print("*" * 28)
     print(ve)
     raise
 

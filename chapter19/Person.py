@@ -40,6 +40,22 @@ p3 = Person('James', 19)
 p4 = Person('Tom', 31)
 print(Person.instance_count)
 
+p1.instance_count = 10
+Person.instance_count = 15
+print('{:30}'.format('Person.instance_count: '), Person.instance_count)
+print('{:30}'.format('p1.instance_count: '), p1.instance_count)
+print('{:30}'.format('p1.__class__.instance_count: '), p1.__class__.instance_count)
+print('{:30}'.format('p2.instance_count: '), p2.instance_count)
+print()
+print(p1.__dict__)
+print(p2.__dict__)
+print(Person.__dict__)
+print()
+
+p1.static_function()
+Person.static_function()
+print()
+
 print('Class attributes')
 print(Person.__name__)
 print(Person.__module__)
@@ -48,3 +64,4 @@ print(Person.__dict__)
 print('Object attributes')
 print(p1.__class__)
 print(p1.__dict__)
+print(p2.__dict__)

@@ -1,6 +1,7 @@
 # Program make a simple calculator that can add, subtract,
 # multiply and divide using functions
 
+
 # Define functions to be used by the calculator
 def add(x, y):
     """" Adds two numbers """
@@ -88,7 +89,7 @@ while not finished:
     elif menu_choice == '2':
         result = subtract(n1, n2)
     elif menu_choice == '3':
-        result - multiply(n1, n2)
+        result = multiply(n1, n2)
     elif menu_choice == '4':
         result = divide(n1, n2)
 

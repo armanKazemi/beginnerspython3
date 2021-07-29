@@ -1,8 +1,10 @@
 def curry(func, num):
     return lambda amt: func(num, amt)
 
+
 def convert(rate, amt):
     return rate * amt
+
 
 dollars_to_sterling = curry(convert, 0.77)
 print(dollars_to_sterling(5))

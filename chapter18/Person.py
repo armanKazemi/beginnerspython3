@@ -1,3 +1,5 @@
+from chapter18.Class import *
+
 class Person:
     """ An example class to hold a persons name and age"""
 
@@ -64,3 +66,6 @@ p1.age = 18
 print(p1)
 
 print(p1.__doc__)
+
+Student.arman()
+maedeh()

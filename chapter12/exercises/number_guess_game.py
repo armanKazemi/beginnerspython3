@@ -9,6 +9,7 @@ count_number_of_tries = 1
 def welcome_message():
     print('Welcome to the number guess game')
 
+
 def game_over_message():
     print('Game Over')
 
@@ -22,7 +23,7 @@ def get_user_input(prompt):
             print('Input must be a number')
         else:
             user_input_int = int(user_input)
-            if (user_input_int < 1 or user_input_int > 10):
+            if user_input_int < 1 or user_input_int > 10:
                 print('input must be a number in the range 1 to 10')
             else:
                 invalid_input = False
@@ -51,7 +52,7 @@ def play_game():
             print('Your guess was higher than the number')
 
         # Obtain their next guess and increment number of attempts
-        guess = int(input('Please guess again: '))
+        guess = get_user_input('Please guess again: ')
         count_number_of_tries += 1
 
     return guess
