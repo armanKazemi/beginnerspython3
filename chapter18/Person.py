@@ -67,8 +67,3 @@ print(p1)
 
 print(p1.__doc__)
 
-Student.arman()
-maedeh()
-
-Student.arman()
-maedeh()
